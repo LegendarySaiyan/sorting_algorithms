@@ -1,4 +1,4 @@
-fn insertion_sort<T: Ord>(arr: &mut [T]) {
+pub fn insertion_sort<T: Ord>(arr: &mut [T]) {
     let len = arr.len();
 
     for i in 1..len {

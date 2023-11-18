@@ -1,4 +1,4 @@
-fn bubble_sort<T: Ord>(arr: &mut [T]) {
+pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
     let len = arr.len();
 
     for i in 0..len {
