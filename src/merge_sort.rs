@@ -40,3 +40,18 @@ pub fn merge_sort<T: Ord + Clone>(arr: &mut [T]) {
         k += 1;
     }
 }
+
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_bubble_sort() {
+        use crate::merge_sort::merge_sort;
+
+        let mut vec = vec![6, 0, 2, 1, 3, 4, 6, 1, 3, 2];
+
+        merge_sort(&mut vec);
+
+        assert_eq!(vec, [0, 1, 1, 2, 2, 3, 3, 4, 6, 6]);
+    }
+}
